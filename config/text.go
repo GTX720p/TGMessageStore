@@ -13,27 +13,16 @@ import (
 // Standard command replies. Add a new entry to create new command no extra configs needed.
 var Commands map[string]string = map[string]string{
 	"START": `
-<i>👋 Hi <b>{mention}</b> I'm a bot that can create <b>links</b> to <b>store</b> your <b>files and messages</b> in a single click 🔗
-<b>Learn</b> how to use me 👉 /help to easily <b>share</b> content with anyone 👣 </i>
+<b> Hello {mention},
+
+I am a File Store Bot Powered by @Corn_Premium</b> 🫦.
 `,
 	"ABOUT": `
-○ <b>Language</b>: <a href='https://go.dev'>GO</a>
-○ <b>Library</b>: <a href='https://github.com/PaulSonOfLars/gotgbot'>GoTgbot</a>
-○ <b>Support</b>: <a href='https://t.me/FractalProjects'>@Fractal</a>
+<b>Sorry, You are not an Authorized User.</b>
 	`,
 
 	"HELP": `
-<i>👋 Hey {mention} I'm a bot that can create <b>permanent</b> links to a single or a <b>batch</b> of messages.</i>
-<i><b>Add</b> me to your <b>channel</b> where you'll posting all the content before using me 😉</i>
-
-<i>Here's a list of my available commands 👉</i>
-
-/start : Start the bot.
-/batch : Create a new message batch.
-/genlink : Create link for a single post.
-/about : Get some data about the bot.
-/help  : Display this help message.
-/privacy: Learn how this bot uses your data.
+<b>Sorry, You are not an Authorized User.</b>
 `,
 
 	"PRIVACY": `<i>This bot does not connect to any database and hence <b>does not store any user data</b> in any form.</i>`,
@@ -88,8 +77,7 @@ var (
 	// fetching batch messages
 	StartGetBatch = "<i><b>Fetching your content...</b></i>"
 	// Force Sub Messsage
-	FsubMessage = `<i><b>👋 Hᴇʏ ᴛʜᴇʀᴇ {mention},</b></i>
-Pʟᴇᴀsᴇ <b>ᴊᴏɪɴ</b> ᴍʏ <b>ᴄʜᴀɴɴᴇʟs</b> ᴜsɪɴɢ ᴛʜᴇ ʟɪɴᴋs ʙᴇʟᴏᴡ ᴛᴏ ᴀᴄᴄᴇss ᴛʜɪs ᴄᴏɴᴛᴇɴᴛ 👇
+	FsubMessage = `<b>👋 Hᴇʏ ᴛʜᴇʀᴇ, ᴘʟᴇᴀsᴇ ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ᴀɴᴅ ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴛʜᴇ ᴛʀʏ ᴀɢᴀɪɴ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ғɪʟᴇs. </b>
 `
 	// Batch Log message
 	BatchLogMessage = `📄 <b>New Batch Created by <tg-spoiler>{mention}</tg-spoiler></b>
@@ -114,5 +102,6 @@ func GetCommand(command string) (string, [][]gotgbot.InlineKeyboardButton) {
 
 	return text, Buttons[command]
 }
+
 
 // GetCommandText returns only text for a command.
