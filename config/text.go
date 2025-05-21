@@ -15,7 +15,7 @@ var Commands map[string]string = map[string]string{
 	"START": `
 <b> Hello {mention},
 
-I am a File Store Bot Powered by @Corn_Premium</b> 🫦.
+I am a File Store Bot Powered by @Anime_Closx</b> 🫦.
 `,
 	"ABOUT": `
 <b>Sorry, You are not an Authorized User.</b>
